@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    font-family: 'Times New Roman';
+    line-height: 1.5;
+}
+
+/* header */
+header {
+    background-color: burlywood;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color:whitesmoke;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+/* ===============================
+   ARTICLE
+   =============================== */
+article {
+  flex: 3; /* Lebih lebar dibanding aside */
+  background-color: #ffd77a; /* Warna kuning pastel */
+  padding: 20px;
+  margin-right: 10px;
+  border-radius: 10px; /* Sudut melengkung */
+}
+
+article section {
+  background-color: #ffecb3; /* Warna section yang lebih terang */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* ===============================
+   ASIDE
+   =============================== */
+aside {
+  flex: 1; /* Lebar lebih kecil */
+  background-color: #5edfff; /* Warna biru muda */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+aside img {
+  width: 100%; /* Gambar mengikuti lebar aside */
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background-color: #ffe45e;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}

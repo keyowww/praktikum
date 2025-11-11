@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mas keyo | Pizzakuu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #555;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .toppings-group, .crust-group {
+            margin: 10px 0;
+        }
+        .button-group {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+        input[type="reset"]:hover {
+            background-color: #da190b;
+        }
+        .required {
+            color: red;
+        }
+        .instruction {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>mas keyo | Pizzakuuy</h1>
+    
+    <p>Pizza Tebal dan Enak siap antar dalam 1 jam. Djamin weanak puooolllll...atur pedas mu</p>
+    
+    <form action="output.php" method="POST">
+        <fieldset>
+            <legend>Deskripsi <span class="required">*</span></legend>
+            <label for="customername">Nama:</label>
+            <input type="text" id="customername" name="customername" maxlength="100" placeholder="nama lengkap" required>
+            
+            <label for="address">Alamat:</label>
+            <input type="text" id="address" name="address" maxlength="100" placeholder="alamat pengantaran" required>
+            
+            <label for="telephone">Nomor handphone:</label>
+            <input type="tel" id="telephone" name="telephone" maxlength="15" placeholder="+62" required>
+            
+            <label for="email">Gmail:</label>
+            <input type="email" id="email" name="email" maxlength="100" placeholder="contoh@gmail.com" required>
+            
+            <label for="instructions">catatan:</label>
+            <textarea id="instructions" name="instructions" maxlength="400" placeholder="contoh : pedasnya sedang,dan pakai sedikit bawang"></textarea>
+            <p class="instruction">Maximum 400 characters</p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Daftar menu</legend>
+            
+            <p><strong>Pizza specs</strong></p>
+            
+            <div class="crust-group">
+                <p><strong>Crust (pilih satu) <span class="required">*</span>:</strong></p>
+                <label><input type="radio" name="crust" value="classic" required> Classic white</label>
+                <label><input type="radio" name="crust" value="multigrain"> Multigrain</label>
+                <label><input type="radio" name="crust" value="cheese-stuffed"> Cheese-stuffed crust</label>
+                <label><input type="radio" name="crust" value="gluten-free"> Gluten-free</label>
+            </div>
+            
+            <div class="toppings-group">
+                <p><strong>Toppings (Choose as many as you want):</strong></p>
+                <label><input type="checkbox" name="toppings[]" value="red-sauce" checked> Red sauce</label>
+                <label><input type="checkbox" name="toppings[]" value="white-sauce"> White sauce</label>
+                <label><input type="checkbox" name="toppings[]" value="mozzarella"> Mozzarella Cheese</label>
+                <label><input type="checkbox" name="toppings[]" value="pepperoni"> Pepperoni</label>
+                <label><input type="checkbox" name="toppings[]" value="mushrooms"> Mushrooms</label>
+                <label><input type="checkbox" name="toppings[]" value="peppers"> Peppers</label>
+                <label><input type="checkbox" name="toppings[]" value="anchovies"> Anchovies</label>
+            </div>
+            
+            <p><strong>Number <span class="required">*</span></strong></p>
+            <label for="quantity">jumlah pizza:</label>
+            <select id="quantity" name="quantity" required>
+                <option value="">Select quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </fieldset>
+        
+        <div class="button-group">
+            <input type="submit" value="Bring me a pizza!">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
