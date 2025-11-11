@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main-content";
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+}
+
+/* Header Styles */
+.header {
+    grid-area: header;
+    background-color: lightgreen;
+    border: 2px solid black;
+    border-radius: 0px;
+    height: 130px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Box sidebar atas */
+.sidebar-top {
+    background-color: lawngreen;
+    border: 2px solid black;
+    border-radius: 0px;
+    min-height: 220px;
+    display: flex;
+}
+
+.sidebar-bottom {
+    background-color: lawngreen;
+    border: 2px solid black;
+    border-radius: 0px;
+    min-height: 190px;
+    display: flex;
+}
+
+.main-content { 
+    grid-area: main-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.red-box {
+    background-color: rgb(223, 12, 12);
+    border: 2px solid black;
+    border-radius: 0px;
+    min-height: 220px;
+    display: flex;;
+}
+
+.aqua-box {
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 0px; 
+    min-height: 190px;
+    display: flex;
+}
