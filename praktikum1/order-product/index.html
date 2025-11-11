@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Web Page - Form Pemesanan Barang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>A Web Page</h1>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Generate Link</a>
+                <a href="#">Transaction History</a>
+                <a href="#">Policy</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+        
+        <div class="form-container">
+            <form action="output.php" method="POST">
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-label">Harga <span class="required">*</span></div>
+                        <div class="form-input">
+                            <input type="text" name="title" value="Rp" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Deskripsi</div>
+                        <div class="form-input">
+                            <input type="text" name="description" value=" Varian Product">
+                            <p class="instruction">daftar menu pesanan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-label">Nomor akun Bank <span class="required">*</span></div>
+                        <div class="form-input">
+                            <input type="text" name="account_number" value="" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Nama Bank</div>
+                        <div class="form-input">
+                            <input type="text" name="book">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">A.N Bank <span class="required">*</span></div>
+                        <div class="form-input">
+                            <input type="text" name="account_holder" value="Pemilik Akun" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-label">Pembeli <span class="required">*</span></div>
+                        <div class="form-input">
+                            <select name="transaction_count" required>
+                                <option value="1">1 orang</option>
+                                <option value="2">2 orang</option>
+                                <option value="3" selected>3 orang</option>
+                                <option value="4">4 orang</option>
+                                <option value="5">5 orang</option>
+                            </select>
+                            <p class="instruction">"Pesanan untuk berapa orang yang memesan"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Kirim Via Mobile</div>
+                        <div class="form-input">
+                            <input type="text" name="mobile_phones" value="+62" placeholder="Enter mobile numbers separated by commas">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Kirim Via Email</div>
+                        <div class="form-input">
+                            <input type="text" name="emails" value="@gmail.com" placeholder="Enter email addresses separated by commas">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">Selesaikan pesanan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
