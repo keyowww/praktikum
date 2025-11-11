@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    background-color: lightpink;
+    height: 150px;
+    line-height: 150px;
+}
+
+main{
+    display: flex;
+    height: 500px;
+    line-height: 500px;
+}
+
+article{
+    flex: 3;
+    order: 1;
+}
+
+aside{
+    flex: 1;
+    order: 2;
+    background-color: floralwhite;
+}
+
+nav{
+    flex: 1;
+    order: 3;
+    background-color: lightslategrey;
+}
+
+footer{
+    background-color: lightblue;
+    height: 100px;
+    line-height: 100px;
+}
