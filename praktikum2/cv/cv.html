@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Kaysan Ahmad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .cv-header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .header-info h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        .header-info .title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .cv-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        .about-text {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3498db;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .timeline-subtitle {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .languages-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .language-item {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .language-level {
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .language-progress {
+            height: 100%;
+            background: #3498db;
+        }
+
+        .interests-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .interest-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            min-width: 100px;
+        }
+
+        .interest-icon {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .cv-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="cv-header">
+            <img src="assets/img/profile.jpg" alt="Foto Profil keyo" class="profile-img" 
+                 onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=Foto+Profil'">
+            
+            <div class="header-info">
+                <h1>Kaysan Ahmad</h1>
+                <div class="title">Full Stack Web Developer</div>
+                <p>Seorang web developer yang berpengalaman dalam mengembangkan aplikasi web modern menggunakan teknologi terkini dengan pengalaman lebih dari 5 tahun.</p>
+                <div class="contact-info">
+                    <div class="contact-item">📧 kaysanahmad70@gmail.com</div>
+                    <div class="contact-item">📱 +62 812-1381-7777</div>
+                    <div class="contact-item">📍 Bogor, Indonesia</div>
+                    <div class="contact-item">🔗 linkedin.com/in/kaysanahmad</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="cv-section">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p class="about-text">
+                Saya adalah seorang Full Stack Developer dengan passion dalam menciptakan solusi digital yang inovatif, Kreatif, dan efisien. 
+                Memiliki pengalaman dalam mengembangkan aplikasi web dari konsep hingga deployment, dengan fokus pada user experience 
+                dan performa yang optimal. Terus mengikuti perkembangan teknologi terbaru dan selalu bersemangat untuk mempelajari hal-hal baru.
+            </p>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="section-title">Keahlian Teknis</h2>
+            <div class="skills-container">
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">MySQL</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">React.js</div>
+                <div class="skill-item">Node.js</div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="section-title">Pengalaman Kerja</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2034 - Sekarang</div>
+                    <div class="timeline-title">Senior Full Stack Developer</div>
+                    <div class="timeline-subtitle">PT. Digital Technology International, Singapure</div>
+                    <p>Manager perusahaan.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2031 - 2034</div>
+                    <div class="timeline-title">Web Developer</div>
+                    <div class="timeline-subtitle">StartUp Inovasi Digital, Jakarta</div>
+                    <p>Mengembangkan aplikasi web dari awal menggunakan React.js dan Node.js.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2029 - 2031</div>
+                    <div class="timeline-title">Junior Web Developer</div>
+                    <div class="timeline-subtitle">CV. Solusi Kreatif, Bogor</div>
+                    <p>Membangun website untuk berbagai klien menggunakan HTML, CSS, JavaScript, Python dan PHP.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 - 2029</div>
+                    <div class="timeline-title">Sarjana Teknik Informatika</div>
+                    <div class="timeline-subtitle">STT Terpadu Nurul Fikri, Jakarta</div>
+                    <p>IPK: 3.8/4.00 - Fokus pada pemrograman web, Cyber Security, dan rekayasa perangkat lunak.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="section-title">Proyek</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-title">Sitem Keamanan</div>
+                    <div class="project-description">Alat Simulasi Respons Insiden Keamanan Siber.</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Sistem Manajemen Konten</div>
+                    <div class="project-description">Membuat CMS custom dengan fitur drag-and-drop builder dan manajemen konten yang mudah.</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Aplikasi Task Management</div>
+                    <div class="project-description">Mengembangkan aplikasi manajemen tugas dengan fitur kolaborasi tim dan notifikasi.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="section-title">Bahasa</h2>
+            <div class="languages-container">
+                <div class="language-item">
+                    <div class="language-name">Indonesia</div>
+                    <div class="language-level">
+                        <div class="language-progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Inggris</div>
+                    <div class="language-level">
+                        <div class="language-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Jepang</div>
+                    <div class="language-level">
+                        <div class="language-progress" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="section-title">Minat</h2>
+            <div class="interests-container">
+                <div class="interest-item">
+                    <div class="interest-icon">💻</div>
+                    <div>Programming</div>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">🏀</div>
+                    <div>Olahraga</div>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">🎵</div>
+                    <div>Musik</div>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">✈️</div>
+                    <div>Traveling</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Kaysan Ahmad. Curriculum Vitae.</p>
+        </footer>
+    </div>
+</body>
+</html>
