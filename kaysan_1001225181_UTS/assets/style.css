@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    border-radius: 3px;
+    padding: 5px;
+    display: inline-flex;
+
+}
+
+nav ul li {
+    margin-right: 15px;
+    display: inline-flex;
+}
+
+nav ul li a {
+    color: rgb(49, 27, 253);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: right;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+}
+
+.hero p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    border: #000000;
+    align-items: left;
+    background-color: #ffffff;
+    
+}
+
+.form-group.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.col-4 {
+    max-width: 33.333333%;
+    padding-left: 15px;
+}
+
+.col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+.col-form-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+}
+
+.form-control {
+    width: 25%;
+    padding: 6px 12px;
+    border: 2px solid #000000;
+    font-size: 14px;
+}
+
+.custom-select {
+    width: 25%;
+    padding: 6px 12px;
+    border: 2px solid #000000;
+    background-color: white;
+    font-size: 14px;
+}
+
+.custom-control-inline {
+    display: inline-flex;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.custom-control-label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000000;
+}
