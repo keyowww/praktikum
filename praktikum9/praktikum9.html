@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Mandiri</title>
+</head>
+<body>
+    <h1>Praktikum Mandiri</h1>
+    
+    <!-- Soal 1: Lingkaran -->
+    <h2>Soal 1: Menghitung Luas dan Keliling Lingkaran</h2>
+    <label>Jari-jari lingkaran:</label>
+    <input type="number" id="jariJari" placeholder="Masukkan jari-jari" onchange="hitungLingkaran()">
+    <br><br>
+    <div id="hasilLingkaran">Hasil akan muncul di sini</div>
+    <hr>
+    
+    <!-- Soal 2: Kurs Rupiah -->
+    <h2>Soal 2: Menghitung Kurs Rupiah ke Dollar</h2>
+    <label>Jumlah Rupiah (IDR):</label>
+    <input type="number" id="rupiah" placeholder="Masukkan jumlah rupiah" onchange="hitungKurs()">
+    <br><br>
+    <div id="hasilKurs">Hasil akan muncul di sini</div>
+    <hr>
+    
+    <!-- Soal 3: Biaya Parkir -->
+    <h2>Soal 3: Menghitung Biaya Parkir</h2>
+    <label>Jam Masuk (0-24):</label>
+    <input type="number" id="jamMasuk" min="0" max="24" placeholder="Contoh: 8" onchange="hitungParkir()">
+    <br>
+    <label>Jam Keluar (0-24):</label>
+    <input type="number" id="jamKeluar" min="0" max="24" placeholder="Contoh: 11" onchange="hitungParkir()">
+    <br><br>
+    <div id="hasilParkir">Hasil akan muncul di sini</div>
+    <hr>
+    
+    <!-- Soal 4: Penjumlahan Dua Bilangan -->
+    <h2>Soal 4: Menghitung Jumlah Dua Bilangan</h2>
+    <label>Bilangan Pertama:</label>
+    <input type="number" id="bilangan1" placeholder="Masukkan bilangan pertama" onchange="hitungJumlah()">
+    <br>
+    <label>Bilangan Kedua:</label>
+    <input type="number" id="bilangan2" placeholder="Masukkan bilangan kedua" onchange="hitungJumlah()">
+    <br><br>
+    <div id="hasilJumlah">Hasil akan muncul di sini</div>
+    
+    <script>
+        // Soal 1: Lingkaran
+        function hitungLingkaran() {
+            const jariJari = parseFloat(document.getElementById('jariJari').value);
+            const hasilElement = document.getElementById('hasilLingkaran');
+            
+            if (isNaN(jariJari) || jariJari < 0) {
+                hasilElement.innerHTML = "Masukkan jari-jari yang valid!";
+                return;
+            }
+            
+            const luas = Math.PI * jariJari * jariJari;
+            const keliling = 2 * Math.PI * jariJari;
+            
+            hasilElement.innerHTML = 
+                `<strong>Hasil perhitungan:</strong><br>
+                Jari-jari: ${jariJari}<br>
+                Luas lingkaran: ${luas.toFixed(2)}<br>
+                Keliling lingkaran: ${keliling.toFixed(2)}`;
+        }
+        
+        // Soal 2: Kurs Rupiah
+        function hitungKurs() {
+            const rupiah = parseFloat(document.getElementById('rupiah').value);
+            const hasilElement = document.getElementById('hasilKurs');
+            const kurs = 14650; // 1 USD = 14.650 IDR
+            
+            if (isNaN(rupiah) || rupiah < 0) {
+                hasilElement.innerHTML = "Masukkan jumlah rupiah yang valid!";
+                return;
+            }
+            
+            const dollar = rupiah / kurs;
+            
+            hasilElement.innerHTML = 
+                `<strong>Hasil konversi:</strong><br>
+                Jumlah Rupiah: Rp ${rupiah.toLocaleString('id-ID')}<br>
+                Nilai Dollar: $ ${dollar.toFixed(2)} USD<br>
+                (Kurs: 1 USD = Rp ${kurs.toLocaleString('id-ID')})`;
+        }
+        
+        // Soal 3: Biaya Parkir
+        function hitungParkir() {
+            const jamMasuk = parseInt(document.getElementById('jamMasuk').value);
+            const jamKeluar = parseInt(document.getElementById('jamKeluar').value);
+            const hasilElement = document.getElementById('hasilParkir');
+            
+            if (isNaN(jamMasuk) || isNaN(jamKeluar) || jamMasuk < 0 || jamMasuk > 24 || jamKeluar < 0 || jamKeluar > 24) {
+                hasilElement.innerHTML = "Masukkan jam yang valid (0-24)!";
+                return;
+            }
+            
+            // Hitung lama parkir
+            let lamaParkir;
+            if (jamKeluar >= jamMasuk) {
+                lamaParkir = jamKeluar - jamMasuk;
+            } else {
+                // Parkir sampai hari berikutnya
+                lamaParkir = (24 - jamMasuk) + jamKeluar;
+            }
+            
+            // Hitung biaya
+            let biaya = 0;
+            if (lamaParkir <= 2) {
+                biaya = 3000;
+            } else {
+                biaya = 3000 + (lamaParkir - 2) * 1000;
+            }
+            
+            hasilElement.innerHTML = 
+                `<strong>Rincian biaya parkir:</strong><br>
+                Jam Masuk: ${jamMasuk}:00<br>
+                Jam Keluar: ${jamKeluar}:00<br>
+                Lama Parkir: ${lamaParkir} jam<br>
+                <strong>Biaya Parkir: Rp ${biaya.toLocaleString('id-ID')}</strong>`;
+        }
+        
+        // Soal 4: Penjumlahan Dua Bilangan
+        function hitungJumlah() {
+            const bilangan1 = parseFloat(document.getElementById('bilangan1').value);
+            const bilangan2 = parseFloat(document.getElementById('bilangan2').value);
+            const hasilElement = document.getElementById('hasilJumlah');
+            
+            if (isNaN(bilangan1) || isNaN(bilangan2)) {
+                hasilElement.innerHTML = "Masukkan kedua bilangan!";
+                return;
+            }
+            
+            const jumlah = bilangan1 + bilangan2;
+            
+            hasilElement.innerHTML = 
+                `<strong>Hasil penjumlahan:</strong><br>
+                ${bilangan1} + ${bilangan2} = <strong>${jumlah}</strong>`;
+        }
+    </script>
+</body>
+</html>
