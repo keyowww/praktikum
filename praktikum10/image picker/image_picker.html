@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <link rel="stylesheet" href="image_picker.css">
+</head>
+<body>
+
+    <h2>Image Picker</h2>
+
+    <select id="imageDropdown" onchange="displayImage()">
+        <option value="">Pilih Gambar Hewan</option>
+        <option value="https://asset.kompas.com/crops/e2hF5aG5669TK6Prr7deJrJdpDk=/433x0:5405x3315/1200x800/data/photo/2023/12/17/657eb67c3a1fb.jpg">Gajah</option>
+        <option value="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpc__4GWZEeFnjaCgSA0h0kxuyVE2IXRSjak2V_5tRhng7aP9UOK7yaKi1PC5gIIFlRXNNF_bTvd_uY2PTCrkOFLArF6yjEHa9BwSKyDhrDA7m3ayBgjBt2RL9sH9s9Yh_CNH2aJuLvwIOQTRBdVaSX1EA-7Ie83_beubJHvsWe9tfL8-RFjyRZWpmps_Y/s1024/1517645564.webp">Harimau</option>
+        <option value="https://c.files.bbci.co.uk/A204/production/_103967414_tv050101276.jpg">Singa</option>
+        <option value="https://cdn.grid.id/crop/0x0:0x0/x/photo/2022/10/31/alasan-mengapa-kuda-harus-menggu-20221031015751.jpg">Kuda</option>
+        <option value="https://www.greeners.co/wp-content/uploads/2020/12/Jerapah-1-min.jpg">Jerapah</option>
+        <option value="https://outdoorempire.com/wp-content/uploads/2022/01/Big-brown-bear-in-the-forest.jpg">Beruang</option>
+        <option value="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3xd49IKBO1HJhWrJwMGnXeO39cDcDnoUMGMU32FNF31q117geHvupY-BLRLLw_Puwte0dhX5U4CLUylbisKlsafuflBCLSKPFqRdaKW-0DEY43zsdeA2bqnDL0B0WhKdh1drNl8rUMuws/s1600/bison+male.jpg">Bison</option>
+        <option value="https://d1bpj0tv6vfxyp.cloudfront.net/articles/253564_20-5-2021_13-2-0.webp">Kucing</option>
+    </select>
+
+    <div id="imageDisplayArea">
+        <img id="selectedImage" src="" alt="Gambar akan muncul di sini" style="display: none;">
+    </div>
+
+    <script src="image_picker.js"></script>
+</body>
+</html>

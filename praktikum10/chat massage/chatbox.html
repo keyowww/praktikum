@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Chat Message</title>
+    <link rel="stylesheet" href="chatbox.css">
+</head>
+<body>
+
+    <h1>Halaman Contoh dengan Scroll</h1>
+    <p>Ini adalah konten panjang untuk menguji fitur 'fixed position' pada chatbox.</p>
+    <script>
+        for (let i = 1; i <= 50; i++) {
+            document.write('<p>Baris konten ke-' + i + '</p>');
+        }
+    </script>
+
+    <div id="chatboxContainer">
+        <div id="messageDisplay">
+            <div class="message received">hello</div>
+            <div class="message received">Apa kabar</div>
+            <div class="message sent">baik ya ?</div>
+            <div class="message received">iya nih</div>
+        </div>
+
+        <div id="inputArea">
+            <input type="text" id="messageInput" placeholder="Ketik pesan Anda...">
+            <button id="sendButton">Kirim</button>
+        </div>
+    </div>
+
+    <script src="chatbox.js"></script>
+</body>
+</html>

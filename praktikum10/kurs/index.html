@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah - Mata Uang Asing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Kurs Rupiah - Mata Uang Asing</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Masukan Nilai</th>
+                <th>Valas</th>
+                <th>Nilai Rupiah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="number" id="nilaiAsing" oninput="hitungKonversi()" placeholder="0" min="0">
+                </td>
+                <td>
+                    <select id="pilihanValas" onchange="hitungKonversi()">
+                        <option value="">Pilih Valas</option>
+                        <option value="USD">Dollar US</option>
+                        <option value="SGD">Dollar Singapore</option>
+                        <option value="MYR">Ringgit Malaysia</option>
+                        <option value="JPY">Yen Jepang</option>
+                        <option value="EUR">Euro</option>
+                        <option value="SAR">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="nilaiRupiah" readonly placeholder="0.00">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

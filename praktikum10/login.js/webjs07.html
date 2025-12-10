@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Belajar JavaScript</title>
+        <script>
+            let jagoan1 = {
+                nama : "Goku",
+                power : 5000,
+                makan : function(porsi) {
+                    console.log(this.nama + " sedang makan " + porsi + " porsi");
+                    this.power = this.power + (porsi * 100);
+                },
+                pukul : function(lawan) {
+                    console.log(this.nama + " sedang memukul " + 
+                    lawan.nama + " dengan power " + this.power);
+                    this.power = this.power - 500;
+                    lawan.power = lawan.power - 500;
+                }
+            };
+             let jagoan2 = {
+                nama : "Vegeta",
+                power : 3000,
+                makan : function(porsi) {
+                    console.log(this.nama + " sedang makan " + porsi + " porsi");
+                    this.power = this.power + (porsi * 200);
+                },
+                pukul : function(lawan) {
+                    console.log(this.nama + " sedang memukul " + 
+                    lawan.nama + " dengan power " + this.power);
+                    this.power = this.power - 300;
+                    lawan.power = lawan.power - 300;
+                }
+            };
+
+            console.log("Power awal " + jagoan1.nama + " : " + jagoan1.power);
+            console.log("Power awal " + jagoan2.nama + " : " + jagoan2.power);
+            jagoan1.makan(5);
+            jagoan2.makan(3);
+            console.log("Setelah makan Power " + jagoan1.nama + " : " + jagoan1.power);
+            console.log("Setelah makan Power " + jagoan2.nama + " : " + jagoan2.power);
+            jagoan2.pukul(jagoan1);
+            console.log("Setelah bertarung Power " + jagoan1.nama + " : " + jagoan1.power);
+            console.log("Setelah bertarung Power " + jagoan2.nama + " : " + jagoan2.power);
+            jagoan1.pukul(jagoan2);
+            console.log("Setelah bertarung Power " + jagoan1.nama + " : " + jagoan1.power);
+            console.log("Setelah bertarung Power " + jagoan2.nama + " : " + jagoan2.power);
+            
+
+
+        </script>
+    </head>
+</html>

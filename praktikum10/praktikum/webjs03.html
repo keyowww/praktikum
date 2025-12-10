@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Java Script</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const buahs = ["Mangga", "Pisang", "Apel", "Jeruk"];
+                const select_buah = document.getElementById("buah");
+
+                for (let idx = 0; idx < buahs.length; idx++) {
+                    console.log("Buah ke - " + idx + " adalah " + buahs[idx]);
+                    const option = document.createElement("option");
+                    option.value = buahs[idx];
+                    option.text = buahs[idx];
+                    select_buah.appendChild(option);
+                }
+            });
+        </script>
+    </head>
+<body>
+<form>
+    Buah Favorit : 
+    <select name="buah" id="buah">
+        <option value="">--- Silakan Pilih Buah ---</option>
+    </select>
+</form>
+</body>
+</html>

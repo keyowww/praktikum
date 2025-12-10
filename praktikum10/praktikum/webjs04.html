@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript OOP</title>
+        <script>
+            let nilaisiswa = {
+                nim  : "012345",
+                nama : "Ahmad Fikri",
+                matakuliah : "Desain UI/UX",
+                nilai : 85,
+                hasil : function() {
+                    if (this.nilai >= 65) {
+                        return "Lulus";
+                    } else {
+                        return "Tidak Lulus";
+                    }
+                }
+            }
+            console.log("Nama Siswa : " + nilaisiswa.nama);
+            console.log("Mata Kuliah : " + nilaisiswa.matakuliah);
+            console.log("Nilai       : " + nilaisiswa.nilai);   
+            console.log("Hasil       : " + nilaisiswa.hasil());
+
+        </script>
+    </head>
+    <body>
+
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Praktikum</title>
+    <link rel="stylesheet" href="form_validation.css">
+</head>
+<body>
+
+    <h2>Form Pemesanan Tiket (Form Validation)</h2>
+    
+    <form id="validationForm" onsubmit="return validateForm(event)">
+        
+        <div class="form-group">
+            <label for="nama">Nama Pelanggan:</label>
+            <input type="text" id="nama" name="nama" maxlength="30">
+            <span id="error-nama" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="example@domain.com">
+            <span id="error-email" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="jam">Jam Keberangkatan (00.00 - 23.59):</label>
+            <input type="text" id="jam" name="jam" placeholder="HH.MM">
+            <span id="error-jam" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="tujuan">Tujuan Keberangkatan:</label>
+            <select id="tujuan" name="tujuan">
+                <option value="">-- Pilih Tujuan --</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Surabaya">Surabaya</option>
+            </select>
+            <span id="error-tujuan" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="tiket">Jumlah Tiket (1 - 10):</label>
+            <input type="number" id="tiket" name="tiket" min="1" max="10">
+            <span id="error-tiket" class="error-message"></span>
+        </div>
+
+        <button type="submit">Kirim Data</button>
+    </form>
+
+    <div id="resultDisplay">
+        <h3>Data Berhasil Divalidasi:</h3>
+        <p><strong>Nama Pelanggan:</strong> <span id="out-nama"></span></p>
+        <p><strong>Email:</strong> <span id="out-email"></span></p>
+        <p><strong>Jam Keberangkatan:</strong> <span id="out-jam"></span></p>
+        <p><strong>Tujuan Keberangkatan:</strong> <span id="out-tujuan"></span></p>
+        <p><strong>Jumlah Tiket:</strong> <span id="out-tiket"></span></p>
+    </div>
+
+    <script src="form_validation.js"></script>
+</body>
+</html>

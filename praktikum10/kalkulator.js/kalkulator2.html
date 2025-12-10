@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function hitung() {
+            let bil1 = parseFloat(document.getElementById("bil1").value);
+            let bil2 = parseFloat(document.getElementById("bil2").value);
+            let op = document.querySelector('input[name="op"]:checked');
+
+            if (!op) {
+                alert("Pilih operasi dulu, bestie.");
+                return;
+            }
+
+            let hasil = 0;
+
+            switch (op.value) {
+                case '+':
+                    hasil = bil1 + bil2;
+                    break;
+                case '-':
+                    hasil = bil1 - bil2;
+                    break;
+                case '*':
+                    hasil = bil1 * bil2;
+                    break;
+                case '/':
+                    hasil = bil1 / bil2;
+                    break;
+            }
+
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+    </script>
+</head>
+<body>
+    <h2>Kalkulator Sederhana</h2>
+    <form>
+        Bilangan 1: <input type="text" id="bil1"><br>
+        Bilangan 2: <input type="text" id="bil2"><br><br>
+
+        Pilih Operasi Aritmatika:  
+        <input type="radio" name="op" value="+"> +
+        <input type="radio" name="op" value="-"> -
+        <input type="radio" name="op" value="*"> ×
+        <input type="radio" name="op" value="/"> ÷
+        <br><br>
+
+        <input type="button" value="Hitung" onclick="hitung();"><br><br>
+
+        Hasil: <span id="hasil"></span>
+    </form>
+</body>
+</html>
